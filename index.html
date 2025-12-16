@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Ink Dynasty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+      
+      body {
+        font-family: 'Noto Serif SC', serif;
+        background-color: #1a1a1a;
+        overflow: hidden;
+        touch-action: none; /* Prevent browser handling of gestures */
+      }
+      
+      /* Ink Bleed Effect for UI */
+      .ink-text {
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+      }
+      
+      /* Disable selection */
+      .no-select {
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Portrait warning animation */
+      @keyframes rotate-phone {
+        0%, 10% { transform: rotate(0deg); }
+        40%, 60% { transform: rotate(-90deg); }
+        90%, 100% { transform: rotate(0deg); }
+      }
+      .animate-rotate {
+        animation: rotate-phone 3s infinite ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
